@@ -20,7 +20,7 @@ export const doesTitleExist = (
 export const isTitleShort = (songTitle: string): boolean => {
   let isShort: boolean;
 
-  isShort = songTitle.length <= 3;
+  isShort = songTitle.length < 3;
 
   return isShort;
 };
