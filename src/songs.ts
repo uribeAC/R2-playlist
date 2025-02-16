@@ -20,7 +20,8 @@ export const doesTitleExist = (
 export const isTitleShort = (songTitle: string): boolean => {
   let isShort: boolean;
 
-  isShort = songTitle.length < 3;
+  const minimumTitleLength = 3;
+  isShort = songTitle.length < minimumTitleLength;
 
   return isShort;
 };
@@ -28,7 +29,8 @@ export const isTitleShort = (songTitle: string): boolean => {
 export const isPlaylistFull = (songTitles: string[]): boolean => {
   let isFull: boolean;
 
-  isFull = songTitles.length >= 5;
+  const maximumSongsNumber = 5;
+  isFull = songTitles.length >= maximumSongsNumber;
 
   return isFull;
 };
