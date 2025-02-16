@@ -1,7 +1,5 @@
 export const isTitleEmpty = (songTitle: string): boolean => {
-  let isEmpty: boolean;
-
-  isEmpty = songTitle === "";
+  const isEmpty: boolean = songTitle === "";
 
   return isEmpty;
 };
@@ -10,27 +8,21 @@ export const doesTitleExist = (
   songTitle: string,
   songTitles: string[]
 ): boolean => {
-  let doesExist: boolean;
-
-  doesExist = songTitles.includes(songTitle);
+  const doesExist: boolean = songTitles.includes(songTitle);
 
   return doesExist;
 };
 
 export const isTitleShort = (songTitle: string): boolean => {
-  let isShort: boolean;
-
   const minimumTitleLength = 3;
-  isShort = songTitle.length < minimumTitleLength;
+  const isShort: boolean = songTitle.length < minimumTitleLength;
 
   return isShort;
 };
 
 export const isPlaylistFull = (songTitles: string[]): boolean => {
-  let isFull: boolean;
-
   const maximumSongsNumber = 5;
-  isFull = songTitles.length >= maximumSongsNumber;
+  const isFull: boolean = songTitles.length >= maximumSongsNumber;
 
   return isFull;
 };
@@ -44,9 +36,7 @@ export const sortSongs = (songTitles: string[]): void => {
 };
 
 export const getSongsCount = (songTitles: string[]): number => {
-  let songsCount: number;
-
-  songsCount = songTitles.length;
+  const songsCount: number = songTitles.length;
 
   return songsCount;
 };
